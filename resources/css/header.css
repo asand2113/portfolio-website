@@ -1,0 +1,16 @@
+#Header {
+    background-color: darkgray;
+    padding: 8px;
+}
+
+#Body {
+    margin: 8px;
+}
+
+.nav-item {
+    padding: 8px;
+}
+
+.vll {
+    border-left: 1px solid black;
+}
