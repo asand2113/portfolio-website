@@ -1,19 +1,22 @@
 {
   "name": "portfolio-website",
-  "version": "1.0.0",
-  "description": "Portfolio Website",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/asand2113/portfolio-website.git"
+  "dependencies": {
+    "vue": "^3.5.18",
+    "vuetify": "^3.9.6"
   },
-  "author": "asand2113",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/asand2113/portfolio-website/issues"
-  },
-  "homepage": "https://github.com/asand2113/portfolio-website#readme"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "vue-tsc": "^3.0.5"
+  }
 }
