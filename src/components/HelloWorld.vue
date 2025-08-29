@@ -16,7 +16,13 @@ const count = ref(0)
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
-
+    <v-expansion-panels>
+	<v-expansion-panel title="Test" text="Other test">
+	</v-expansion-panel>
+    </v-expansion-panels>
+    <p class="mb-3 font-weight-bold">
+	Testing Text
+    </p>
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
