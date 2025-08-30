@@ -4,9 +4,13 @@
   font-weight: 400;
 
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+body {
+  background-image: linear-gradient(to right, #c4caf2, #303f9c);
 }
