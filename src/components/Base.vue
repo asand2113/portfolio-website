@@ -28,7 +28,7 @@
     <v-container class="h-screen">
 	<v-row class="fill-height mx-auto" align="center" style="max-width: 75%">
 	    <v-col cols="2">
-		<v-sheet border rounded style="height: 80vh" class="position-relative">
+		<v-sheet border rounded style="height: 80vh; background: rgba(255, 255, 255, 0.5)" class="position-relative">
 		    <p class="pa-4">NAVIGATION</p>
 		    <v-divider thickness="4" role="presentation" />
 		    <v-list mandatory v-model:selected="selected">
