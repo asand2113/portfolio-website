@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const selectedTab = ref(1)
+const selectedTab = ref(1);
     const items = [
     {
       title: 'HOME',
@@ -29,8 +29,9 @@ const selectedTab = ref(1)
 		<v-sheet border rounded style="height: 80vh" class="position-relative">
 		    <p class="pa-4">NAVIGATION</p>
 		    <v-divider thickness="4" role="presentation" />
-		    <v-list>
-			<v-list-item v-for="item in items" :key="item.title" :title="item.title" @click="selectedTab = item.value" />
+		    <v-list mandatory>
+			<v-list-item v-for="item in items" :key="item.title" :title="item.title" 
+			@click="selectedTab = item.value" style="background-color: #c9daf8ff" :value="item.value" color="info" />
 		    </v-list>
 		    <div style="text-align: center" class="position-absolute bottom-0 right-0 left-0">
 			<a target="_blank" href="https://github.com/asand2113/portfolio-website">2025 Andrew Sand</a>
@@ -39,9 +40,9 @@ const selectedTab = ref(1)
 	    </v-col>
 	    <v-col>
 		<v-sheet border rounded style="height: 80vh">
-		    <v-card title="WELCOME!" v-if="selectedTab === 1">
-			<v-card-text>
-			    Testing
+		    <v-card title="WELCOME!" v-if="selectedTab === 1" class="h-100 w-100"> 
+			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100">
+			    Welcome to my personal website!
 			</v-card-text>
 		    </v-card>
 		    <v-card title="ABOUT ME" v-if="selectedTab === 2">
