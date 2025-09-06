@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+    import { shallowRef } from 'vue'
+    import { ref } from 'vue'
 
-const selectedTab = ref(1);
+    const selected = shallowRef([1]);
+    const selectedTab = ref(1);
     const items = [
     {
       title: 'HOME',
@@ -29,9 +31,9 @@ const selectedTab = ref(1);
 		<v-sheet border rounded style="height: 80vh" class="position-relative">
 		    <p class="pa-4">NAVIGATION</p>
 		    <v-divider thickness="4" role="presentation" />
-		    <v-list mandatory>
-			<v-list-item v-for="item in items" :key="item.title" :title="item.title" 
-			@click="selectedTab = item.value" style="background-color: #c9daf8ff" :value="item.value" color="info" class="text-center ma-1" rounded="shaped" />
+		    <v-list mandatory v-model:selected="selected">
+			<v-list-item v-for="item in items" :key="item.value" :title="item.title" 
+			@click="selectedTab = item.value; console.log(selectedTab === 1);" style="background-color: #c9daf8ff" :value="item.value" color="info" class="text-center ma-1" rounded="shaped" />
 		    </v-list>
 		    <div style="text-align: center" class="position-absolute bottom-0 right-0 left-0">
 			<a target="_blank" href="https://github.com/asand2113/portfolio-website">2025 Andrew Sand</a>
