@@ -28,7 +28,7 @@
     <v-container class="h-screen">
 	<v-row class="fill-height mx-auto" align="center" style="max-width: 75%">
 	    <v-col cols="2">
-		<v-sheet border rounded="lg" style="height: 80vh; background: rgba(255, 255, 255, 0.5)" class="position-relative" elevation="10">
+		<v-sheet border="primary lg" rounded="lg" style="height: 80vh; background: rgba(255, 255, 255, 0.5)" class="position-relative" elevation="10">
 		    <p class="pa-4">NAVIGATION</p>
 		    <v-divider thickness="4" role="presentation" />
 		    <v-list mandatory v-model:selected="selected">
@@ -42,7 +42,7 @@
 		</v-sheet>
 	    </v-col>
 	    <v-col>
-		<v-sheet border rounded="lg" style="height: 80vh" elevation="10">
+		<v-sheet border="primary lg" rounded="lg" style="height: 80vh" elevation="10">
 		    <v-card title="WELCOME!" v-if="selectedTab === 1" class="h-100 w-100" rounded="lg"> 
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
 			    Welcome to my personal website! <br/>
@@ -51,17 +51,29 @@
 		    </v-card>
 		    <v-card title="ABOUT ME" v-if="selectedTab === 2" class="h-100 w-100" rounded="lg">
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
-
+			    <v-card>
+				<v-card-title>
+				    Andrew Sand
+				</v-card-title>
+				<v-card-subtitle>
+				    Software Engineer
+				</v-card-subtitle>
+				<v-card-text>
+				    Temp
+				</v-card-text>
+			    </v-card>
 			</v-card-text>
 		    </v-card>
 		    <v-card title="PROJECTS" v-if="selectedTab === 3" class="h-100 w-100" rounded="lg">
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
-
+			    Temp
 			</v-card-text>
 		    </v-card>
 		    <v-card title="CREDITS" v-if="selectedTab === 4" class="h-100 w-100" rounded="lg">
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
-
+			    Designed and Programmed by Andrew Sand <br/>
+			    Made using Vue (With Vuetify), Vite, and TypeScript <br/>
+			    <a target="_blank" href="https://github.com/asand2113/portfolio-website">Website Source Code</a>
 			</v-card-text>
 		    </v-card>
 		</v-sheet>
