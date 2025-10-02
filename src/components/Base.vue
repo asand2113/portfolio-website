@@ -50,7 +50,7 @@
 <template>
     <v-container class="h-screen">
 	<v-row class="fill-height mx-auto" align="center" style="max-width: 75%">
-	    <v-col cols="2">
+	    <v-col cols="3" xl="2" xxl="2">
 		<v-sheet border="primary lg" rounded="lg" style="height: 80vh; background: rgba(255, 255, 255, 0.5)" class="position-relative" elevation="10">
 		    <p class="pa-4">NAVIGATION</p>
 		    <v-divider thickness="4" role="presentation" />

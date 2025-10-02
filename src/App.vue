@@ -2,12 +2,14 @@
   import Base from './components/Base.vue'
   import Error from './components/Error.vue'
   import { useDisplay } from 'vuetify'
+  import { onMounted } from 'vue'
+  
+  const { smAndDown } = useDisplay()
 
-  const { mobile } = useDisplay()
 </script>
 
 <template>
-    <Base v-if="mobile == false" />
+    <Base v-if="smAndDown == false" />
     <Error v-else />
 </template>
 
