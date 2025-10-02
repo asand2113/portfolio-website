@@ -56,7 +56,7 @@
 		    <v-divider thickness="4" role="presentation" />
 		    <v-list mandatory v-model:selected="selected">
 			<v-list-item v-for="item in items" :key="item.value" :title="item.title" 
-			@click="selectedTab = item.value; console.log(selectedTab === 1);" 
+			@click="selectedTab = item.value" 
 			style="background-color: #c9daf8ff" :value="item.value" color="info" class="text-center ma-1" rounded="shaped" />
 		    </v-list>
 		    <div style="text-align: center" class="position-absolute bottom-0 right-0 left-0">
