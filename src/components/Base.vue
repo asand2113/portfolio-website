@@ -99,8 +99,8 @@
 				<v-container class="pa-2" fluid>
 				  <v-row dense>
 				    <v-col
-				      v-for="item in items"
-				      :key="item.title"
+				      v-for="(item, i) in items"
+				      :key="i"
 				      cols="auto"
 				      md="4">
 				      <v-card class="pb-3" border flat>

@@ -2,7 +2,6 @@
   import Base from './components/Base.vue'
   import Error from './components/Error.vue'
   import { useDisplay } from 'vuetify'
-  import { onMounted } from 'vue'
   
   const { smAndDown } = useDisplay()
 

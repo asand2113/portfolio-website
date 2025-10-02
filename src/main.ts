@@ -4,7 +4,7 @@ import App from './App.vue'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
 // Vuetify
-import 'vuetify/styles'
+import 'vuetify/styles/main.css'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
