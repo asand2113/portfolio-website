@@ -60,7 +60,7 @@
 			style="background-color: #c9daf8ff" :value="item.value" color="info" class="text-center ma-1" rounded="shaped" />
 		    </v-list>
 		    <div style="text-align: center" class="position-absolute bottom-0 right-0 left-0">
-			<a target="_blank" href="https://github.com/asand2113/portfolio-website">© 2025 Andrew Sand</a>
+			<v-btn target="_blank" href="https://github.com/asand2113/portfolio-website" block color="primary">© 2025 Andrew Sand</v-btn>
 		    </div>
 		</v-sheet>
 	    </v-col>
@@ -74,44 +74,53 @@
 		    </v-card>
 		    <v-card title="ABOUT ME" v-if="selectedTab === 2" class="h-100 w-100" rounded="lg">
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
-			    <v-card>
-				<v-card-title>
-				    Andrew Sand
-				</v-card-title>
-				<v-card-subtitle>
-				    Software Engineer
-				</v-card-subtitle>
-				<v-card-text>
-				    Education:<br/>
-				    Bachelor of Science in Software Engineering from Iowa State University.<br/>
-				    Minored in Music Technology.
-				</v-card-text>
-			    </v-card>
+			    <v-row>
+				<v-col cols="3">
+				    <v-img src="images/Portfolio.PNG" />
+				    Temp
+				</v-col>
+				<v-col>
+				    <v-card>
+					<v-card-title>
+					    Andrew Sand
+					</v-card-title>
+					<v-card-subtitle>
+					    Software Engineer
+					</v-card-subtitle>
+					<v-card-text>
+					    Education:<br/>
+					    Bachelor of Science in Software Engineering from Iowa State University.<br/>
+					    Minored in Music Technology.
+					</v-card-text>
+				    </v-card>
+				</v-col>
+			    </v-row>
 			</v-card-text>
 		    </v-card>
 		    <v-card title="PROJECTS" v-if="selectedTab === 3" class="h-100 w-100" rounded="lg">
 			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
+			    <v-row align="center" class="fill-height">
 			    <v-data-iterator
 			      :items="projects"
 			      :items-per-page="3">
 
 			      <template v-slot:default="{ items }">
-				<v-container class="pa-2" fluid>
-				  <v-row dense>
+				<v-container class="pa-2">
+				  <v-row dense align="stretch">
 				    <v-col
 				      v-for="(item, i) in items"
 				      :key="i"
 				      cols="auto"
 				      md="4">
-				      <v-card class="pb-3" border flat>
-					<v-img :src="`images/${item.raw.img}`"></v-img>
+				      <v-card class="pb-3 fill-height" border>
+					<v-img :src="`images/${item.raw.img}`" aspect-ratio="1" cover></v-img>
 
-					<v-list-item :subtitle="item.raw.subtitle" class="mb-2">
+					<v-list-item :subtitle="item.raw.subtitle" class="mb-8">
 					  <template v-slot:title>
 					    <strong class="text-h6 mb-2">{{ item.raw.title }}</strong>
 					  </template>
 					</v-list-item>
-					<div class="ma-2">
+					<div style="text-align: center" class="ma-2 position-absolute bottom-0 right-0 left-0">
 					    <v-btn :href="item.raw.link" target="_blank" block color="primary">Go to Project</v-btn>
 					</div>
 
@@ -147,6 +156,7 @@
 				</div>
 			      </template>
 			    </v-data-iterator>
+			    </v-row>
 			</v-card-text>
 		    </v-card>
 		    <v-card title="CREDITS" v-if="selectedTab === 4" class="h-100 w-100" rounded="lg">
