@@ -164,6 +164,20 @@
 			    Designed and Programmed by Andrew Sand <br/>
 			    Made using Vue (With Vuetify), Vite, and TypeScript <br/>
 			    <a target="_blank" href="https://github.com/asand2113/portfolio-website">Website Source Code</a>
+			    <v-expansion-panels class="mt-4">
+				<v-expansion-panel title="Attributions">
+				    <v-expansion-panel-text>
+					<ul style="list-style-type:none;">
+					    <li><a target="_blank" href="https://vite.dev/">Vite</a>,
+						included under the <a target="_blank" href="https://opensource.org/license/MIT">MIT License</a></li>
+					    <li><a target="_blank" href="https://vuejs.org/">Vue</a>,
+						included under the <a target="_blank" href="https://opensource.org/license/MIT">MIT License</a></li>
+					    <li><a target="_blank" href="https://vuetifyjs.com/">Vuetify</a>,
+						included under the <a target="_blank" href="https://opensource.org/license/MIT">MIT License</a></li>
+					</ul> 
+				    </v-expansion-panel-text>
+				</v-expansion-panel>
+			    </v-expansion-panels>
 			</v-card-text>
 		    </v-card>
 		</v-sheet>
