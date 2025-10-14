@@ -3,7 +3,6 @@
     import { ref } from 'vue'
     import { mdiArrowLeft } from '@mdi/js'
     import { mdiArrowRight } from '@mdi/js'
-    import '../styles/blur.css'
 
     const selected = shallowRef([1]);
     const selectedTab = ref(1);
@@ -208,41 +207,17 @@
 </template>
 
 <style scoped>
-
-.test-glass {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* For Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden; /* Ensures inner content respects border-radius */
+.background-blur {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: rgba(180, 255, 248, 0.15); 
+    backdrop-filter: blur(2px) saturate(150%); 
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); 
+    color: white; 
+    text-align: center;
 }
 
-.v-btn.test-glossy {
-  border-radius: 8px;
-  background: linear-gradient(180deg, #e5f1ff 0%, #d8e5f1 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
-              0 1px 2px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #333;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-.v-btn.test-glossy:active {
-  background: linear-gradient(180deg, #d8e5f1 0%, #e5f1ff 100%);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.test-glass .v-card-title,
-.test-glass .v-card-text {
-    background: transparent;
-}
-
-.v-card-title.test-title {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 1rem;
+.v-btn.background-blur:hover {
+    transform: translateY(-3px);
+    transition: transform 0.4s ease-in-out;
 }
 </style>
