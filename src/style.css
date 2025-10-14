@@ -12,5 +12,6 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #c4caf2, #303f9c);
+  background-image: url(images/Portfolio.PNG);
+/*background-image: linear-gradient(to right, #000033, #303f9c);*/
 }
