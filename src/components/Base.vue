@@ -51,40 +51,34 @@
     <v-container class="h-screen">
 	<v-row class="fill-height mx-auto" align="center" style="max-width: 75%">
 	    <v-col cols="3" xl="2" xxl="2">
-		<v-sheet border="primary lg" rounded="lg" style="height: 80vh; background: rgba(255, 255, 255, 0.5)" class="position-relative" elevation="10">
+		<v-sheet rounded="lg" style="height: 80vh;" class="position-relative background-blur" elevation="10">
 		    <p class="pa-4">NAVIGATION</p>
-		    <v-divider thickness="4" role="presentation" />
-		    <v-list mandatory v-model:selected="selected">
+		    <v-divider thickness="4" role="presentation" color="warning" />
+		    <v-list mandatory v-model:selected="selected" class="foreground-blur">
 			<v-list-item v-for="item in items" :key="item.value" :title="item.title" 
 			@click="selectedTab = item.value" 
 			style="background-color: #c9daf8ff" :value="item.value" color="info" class="text-center ma-1" rounded="shaped" />
 		    </v-list>
 		    <div style="text-align: center" class="position-absolute bottom-0 right-0 left-0">
-			<v-divider thickness="10" class="pb-8" color="warning" />
-			<v-btn target="_blank" href="https://github.com/asand2113/portfolio-website" block color="primary">© 2025 Andrew Sand</v-btn>
+			<v-divider thickness="10" class="pb-8" color="warning" role="presentation" />
+			<v-btn target="_blank" href="https://github.com/asand2113/portfolio-website" block class="background-blur">© 2025 Andrew Sand</v-btn>
 		    </div>
 		</v-sheet>
 	    </v-col>
 	    <v-col>
-		<v-sheet border="primary lg" rounded="lg" style="height: 80vh" elevation="10">
-		    <v-card title="WELCOME!" v-if="selectedTab === 1" class="h-100 w-100" rounded="lg"> 
-			<v-card-text style="background-color: #c9daf8ff" class="pt-4 h-100 w-100 rounded-t-xl">
+		<v-sheet rounded="lg" style="height: 80vh" elevation="10" class="background-blur">
+		    <v-card title="WELCOME!" v-if="selectedTab === 1" class="h-100 w-100 foreground-blur" rounded="lg"> 
+			<v-card-text class="pt-4 h-100 w-100 rounded-t-xl">
 			    Welcome to my personal website! <br/>
 			    Use the tabs on the left to navigate!
-			    <div style="height: 10vh; display: flex; justify-content: center; align-items: center; background: url(images/Minesweeper.PNG)">
-				<div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 30px; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); color: white; text-align: center;">
-				    
-				    <svg style="position: absolute; width: 0; height: 0;">
-					    <filter id="liquid-distortion">
-						<feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="turbulence" />
-						<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G" />
-						<feGaussianBlur stdDeviation="1" in="SourceGraphic" result="blurredSource" />
-						<feBlend in="blurredSource" in2="SourceGraphic" mode="multiply" />
-					    </filter>
-					</svg>
-				    Test
-				</div>
-			    </div>
+			    <svg style="position: absolute; width: 0; height: 0;">
+				<filter id="liquid-distortion">
+				    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="turbulence" />
+				    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G" />
+				    <feGaussianBlur stdDeviation="1" in="SourceGraphic" result="blurredSource" />
+				    <feBlend in="blurredSource" in2="SourceGraphic" mode="multiply" />
+				</filter>
+			    </svg>
 			    <div style="height: 10vh; display: flex; justify-content: center; align-items: center; background: url(images/Minesweeper.PNG)">
 				<v-btn rounded="xl" class="background-blur">
 				    Test
@@ -213,11 +207,15 @@
     backdrop-filter: blur(2px) saturate(150%); 
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2); 
     color: white; 
-    text-align: center;
 }
 
 .v-btn.background-blur:hover {
     transform: translateY(-3px);
     transition: transform 0.4s ease-in-out;
+}
+
+.foreground-blur {
+    color: white;
+    background: rgba(255, 255, 255, 0);
 }
 </style>
